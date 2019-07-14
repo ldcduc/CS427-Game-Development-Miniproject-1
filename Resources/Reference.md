@@ -1,0 +1,9 @@
+https://www.gameart2d.com/cute-girl-free-sprites.html
+https://www.gameart2d.com/the-boy---free-sprites.html
+https://www.gameart2d.com/free-platformer-game-tileset.html
+https://www.gameart2d.com/winter-platformer-game-tileset.html
+https://www.gameart2d.com/free-desert-platformer-tileset.html
+https://www.gameart2d.com/free-graveyard-platformer-tileset.html
+https://www.gameart2d.com/free-sci-fi-platformer-tileset.html
+https://opengameart.org/content/animated-spinning-gems
+https://opengameart.org/content/diamond
