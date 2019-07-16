@@ -45,21 +45,22 @@ Considering
 
 ## Development Progress
 ### Material
-* Cute girl (done)
-* Flat boy (done)
-* Diamonds (done)
+* Cute girl &rarr; done
+* Flat boy &rarr; done
+* Diamonds &rarr; done
+
+### Player Controller
+* Cute girl &rarr; done
+* Flat boy &rarr; done
 
 ### Levels
 * Background
 * Script (idea)
-	* Level 1 (done)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-	* Level 2
+	* Level 1 &rarr; done
+	* Level 2 &rarr; done
 * Layout (implemented)
-	* Level 1 
+	* Level 1
 	* Level 2
 * Script + Layout (implemented)
 	* Level 1
 	* Level 2
-
-
-
