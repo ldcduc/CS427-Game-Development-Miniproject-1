@@ -1,20 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SettingNamespace;
 
 public class FlatboyMovement : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rb;
-    public float moveSpeed = 1f;
-    public float jumpSpeed = 4f;
+    private float runSpeed = Settings.factor * Settings.runSpeed;
+    private float walkSpeed = Settings.factor * Settings.walkSpeed;
+    private float jumpSpeed = Settings.jumpFactor * Settings.jumpForce;
+    private float moveSpeed = 0.2f;
+
     public bool isGrounded = false;
     public bool isJumping = false;
     public bool isRunning = false;
     public bool isWalking = false;
-    const float runSpeed = 3f;
-    const float walkSpeed = 1f;
     float dirX = 0f;
+    Vector2 newPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,52 +28,44 @@ public class FlatboyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("BoyJump")) {
-            anim.SetBool("isJumping", true);
+        newPos = transform.position;
+
+        isGrounded = Mathf.Abs(rb.velocity.y) < 1e-6;
+        if (Input.GetButtonDown("BoyJump") && isGrounded) {
             rb.AddForce(new Vector2(0f, jumpSpeed), ForceMode2D.Impulse);
+        } 
+
+        anim.SetBool("isJumping", !isGrounded);
+        if (!isGrounded) {
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isWalking", false);
         }
 
         if (Input.GetKey(KeyCode.DownArrow)) 
             moveSpeed = walkSpeed;
         else moveSpeed = runSpeed;
 
+        string stringAction = moveSpeed == walkSpeed ? "isWalking" : "isRunning";
+        string stringActionNot = moveSpeed != walkSpeed ? "isWalking" : "isRunning";
         if (Input.GetKey(KeyCode.LeftArrow)) {
             GetComponent<SpriteRenderer>().flipX = true;
+            newPos.x -= moveSpeed;
+            transform.position = newPos;
+            anim.SetBool(stringAction, true);
+            anim.SetBool(stringActionNot, false);
         }
-        if (Input.GetKey(KeyCode.RightArrow)) {
+        else if (Input.GetKey(KeyCode.RightArrow)) {
             GetComponent<SpriteRenderer>().flipX = false;
+            newPos.x += moveSpeed;
+            transform.position = newPos;
+            anim.SetBool(stringAction, true);
+            anim.SetBool(stringActionNot, false);
         }
-
-        SetAnimationState();
-
-        if (!anim.GetBool("isDead")) 
-            dirX = Input.GetAxisRaw("Horizontal") * moveSpeed;
-    }
-
-    void FixedUpdate() {
-        rb.velocity = new Vector2(dirX, rb.velocity.y);
-    }
-
-    void SetAnimationState() {
-        if (isGrounded == true) {
-            anim.SetBool("isJumping", false);
-        }
-
-        if (Mathf.Abs(dirX) == walkSpeed && anim.GetBool("isJumping") == false)
-            anim.SetBool("isWalking", true);
-        else 
-            anim.SetBool("isWalking", false);
-        if (Mathf.Abs(dirX) == runSpeed && anim.GetBool("isJumping") == false) 
-            anim.SetBool("isRunning", true);
-        else 
+        else {
             anim.SetBool("isRunning", false);
+            anim.SetBool("isWalking", false);
+        }
 
-        // Debug.Log(isGrounded + " " + " isJumping:" + anim.GetBool("isJumping"));
-        // Debug.Log("isWalking:" + anim.GetBool("isWalking"));
-        // Debug.Log("isRunning:" + anim.GetBool("isRunning"));
-        Debug.Log("isJumping:" + anim.GetBool("isJumping"));
-        Debug.Log("isWalking:" + anim.GetBool("isWalking"));
-        Debug.Log("isRunning:" + anim.GetBool("isRunning"));
         isRunning = anim.GetBool("isRunning");
         isJumping = anim.GetBool("isJumping");
         isWalking = anim.GetBool("isWalking");
