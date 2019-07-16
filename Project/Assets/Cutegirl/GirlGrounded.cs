@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoyGrounded : MonoBehaviour
+public class GirlGrounded : MonoBehaviour
 {
     GameObject Player;
     // Start is called before the first frame update
@@ -17,11 +17,11 @@ public class BoyGrounded : MonoBehaviour
         
     }
 
-    // private void OnCollisionEnter2D(Collision2D collision) {
-    //     Player.GetComponent<FlatboyMovement>().isGrounded = true;
-    // }
+    private void OnCollisionEnter2D(Collision2D collision) {
+        Player.GetComponent<CutegirlMovement>().isGrounded = true;
+    }
 
-    // private void OnCollisionExit2D(Collision2D collision) {
-    //     Player.GetComponent<FlatboyMovement>().isGrounded = false;
-    // }
+    private void OnCollisionExit2D(Collision2D collision) {
+        Player.GetComponent<CutegirlMovement>().isGrounded = false;
+    }
 }
