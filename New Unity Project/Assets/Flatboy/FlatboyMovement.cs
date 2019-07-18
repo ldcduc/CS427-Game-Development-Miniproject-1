@@ -16,7 +16,8 @@ public class FlatboyMovement : MonoBehaviour
     public bool isJumping = false;
     public bool isRunning = false;
     public bool isWalking = false;
-    float dirX = 0f;
+    public bool isDead = false;
+    public int score = 0;
     Vector2 newPos;
     // Start is called before the first frame update
     void Start()
@@ -69,5 +70,6 @@ public class FlatboyMovement : MonoBehaviour
         isRunning = anim.GetBool("isRunning");
         isJumping = anim.GetBool("isJumping");
         isWalking = anim.GetBool("isWalking");
+        isDead = anim.GetBool("isDead");
     }
 }
