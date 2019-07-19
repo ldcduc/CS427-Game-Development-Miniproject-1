@@ -1,5 +1,9 @@
 # CS427-Game-Development-Miniproject-1
 
+## Release Url
+[https://ldcduc2020.github.io/boyandgirl/](https://ldcduc2020.github.io/boyandgirl/)  
+This is still in development process
+
 ## Requirement
 * Feature
 	* 2 levels or 2 game modes
@@ -64,3 +68,4 @@ Considering
 * Script + Layout (implemented)
 	* Level 1
 	* Level 2
+
