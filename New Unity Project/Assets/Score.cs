@@ -9,8 +9,10 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int score1 = flatBoy.GetComponent<FlatboyMovement>().score;
-        int score2 = cuteGirl.GetComponent<CutegirlMovement>().score;
-        GetComponent<TMPro.TextMeshProUGUI>().text = (score1 + score2).ToString();
+        if (flatBoy != null && cuteGirl != null) {
+            int score1 = flatBoy.GetComponent<FlatboyMovement>().score;
+            int score2 = cuteGirl.GetComponent<CutegirlMovement>().score;
+            GetComponent<TMPro.TextMeshProUGUI>().text = (score1 + score2).ToString();
+        } 
     }
 }

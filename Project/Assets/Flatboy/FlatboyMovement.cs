@@ -5,6 +5,7 @@ using SettingNamespace;
 
 public class FlatboyMovement : MonoBehaviour
 {
+    AudioSource jumpAudio;
     [SerializeField] private GameObject camera;
     private GameObject otherPlayer;
     private Animator anim;
@@ -19,6 +20,7 @@ public class FlatboyMovement : MonoBehaviour
     public bool isRunning = false;
     public bool isWalking = false;
     public bool isDead = false;
+    
     public int score = 0;
     private float maxDistance = 1000f;
     Vector2 newPos;
@@ -29,6 +31,7 @@ public class FlatboyMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         otherPlayer = GameObject.Find("Cutegirl");
         maxDistance = camera.GetComponent<CameraWithPlayers>().maxDistance;
+        jumpAudio = gameObject.GetComponent<AudioSource>();
     }
 
     bool CheckOutOfBound(float x) {
@@ -43,6 +46,7 @@ public class FlatboyMovement : MonoBehaviour
         isGrounded = Mathf.Abs(rb.velocity.y) < 1e-6;
         if (Input.GetButtonDown("BoyJump") && isGrounded) {
             rb.AddForce(new Vector2(0f, jumpSpeed), ForceMode2D.Impulse);
+            jumpAudio.Play();
         } 
 
         anim.SetBool("isJumping", !isGrounded);
