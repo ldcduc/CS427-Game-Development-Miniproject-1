@@ -1,71 +1,34 @@
-# CS427-Game-Development-Miniproject-1
+# CS427 - Midterm project
+## Student information
+* Student ID: **1651044**  
+* Full name: _Le Duong Cong Duc_  
 
-## Release Url
-[https://ldcduc2020.github.io/boyandgirl/](https://ldcduc2020.github.io/boyandgirl/)  
-This is still in development process
+## [Play now](https://ldcduc2020.github.io/boyandgirl/)
 
-## Requirement
-* Feature
-	* 2 levels or 2 game modes
-	* Pitfalls, challenges, enemies, things to support player
-	* Input system from keyboard
-	* Interactive menu, background musicc, sound effects
-	* Interface showing information, status of character
-* Techniques
-	* 2D sprites
-	* Physics
-	* Graphical user interface
-	* Animation
-* Build into .exe file
+## Brief Introduction of Game
 
-## Product Marketing
-* Trailer video
-	* Max 2 minutes, uploaded to Youtube
-	* Present storyline with text or voice in English
-	* Impressive features
-	* Several effects and transitions
-* Design poster
-	* A3 or A4
-	* Present storyline with texts, images
-	* Show impressive features
-	* Several text fonts and effects in poster
 
-## Advanced Requirements
-Considering
-* Multiplayer
-* Shopping
-* Several screen resolution
 
-## Submission Rules
-* StudentID folder, **push** to **github** and submit github link
-* Structure
-	* Build: contains 6 sub-directories
-	* Marketing: video link or poster link
-	* Report: present the ideas, features, techniques, resource reference
-	* Demo (if any): demo video for in-game control, demo video for each platform
-	* Project: all source code, resources and libraries
-	* **Readme.md** file in github: student code, full name, brief introduction, accented letters, Unity version and resource reference
-* Official test time _12 pm_ **13/07** to _12 pm_ **17/07**
+## Application
 
-## Development Progress
-### Material
-* Cute girl &rarr; done
-* Flat boy &rarr; done
-* Diamonds &rarr; done
 
-### Player Controller
-* Cute girl &rarr; done
-* Flat boy &rarr; done
+## Accented Letters
 
-### Levels
-* Background
-* Script (idea)
-	* Level 1 &rarr; done
-	* Level 2 &rarr; done
-* Layout (implemented)
-	* Level 1
-	* Level 2
-* Script + Layout (implemented)
-	* Level 1
-	* Level 2
 
+## Unity Version
+Unity version **2019.1.10f1 Personal** for MacOS
+UnityHub version **2.0.4**
+
+## Resource Reference
+[https://www.gameart2d.com/cute-girl-free-sprites.html](https://www.gameart2d.com/cute-girl-free-sprites.html)
+[https://www.gameart2d.com/the-boy---free-sprites.html](https://www.gameart2d.com/the-boy---free-sprites.html)
+[https://www.gameart2d.com/free-platformer-game-tileset.html](https://www.gameart2d.com/free-platformer-game-tileset.html)
+[https://www.gameart2d.com/winter-platformer-game-tileset.html](https://www.gameart2d.com/winter-platformer-game-tileset.html)
+[https://www.gameart2d.com/free-desert-platformer-tileset.html](https://www.gameart2d.com/free-desert-platformer-tileset.html)
+[https://www.gameart2d.com/free-graveyard-platformer-tileset.html](https://www.gameart2d.com/free-graveyard-platformer-tileset.html)
+[https://www.gameart2d.com/free-sci-fi-platformer-tileset.html](https://www.gameart2d.com/free-sci-fi-platformer-tileset.html)
+[https://opengameart.org/content/animated-spinning-gems](https://opengameart.org/content/animated-spinning-gems)
+[https://opengameart.org/content/diamond](https://opengameart.org/content/diamond)
+[https://www.youtube.com/watch?v=1MPBnVU8_I4](https://www.youtube.com/watch?v=1MPBnVU8_I4)
+[https://www.youtube.com/watch?v=rudx0-gXZD4](https://www.youtube.com/watch?v=rudx0-gXZD4)
+[https://www.youtube.com/watch?v=q9swmo6309U](https://www.youtube.com/watch?v=q9swmo6309U)

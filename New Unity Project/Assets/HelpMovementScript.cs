@@ -21,20 +21,20 @@ public class HelpMovementScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Flatboy") {
-            text1.SetActive(true);
+            text2.SetActive(true);
         }
         if (collision.gameObject.name == "Cutegirl") {
-            text2.SetActive(true);
+            text1.SetActive(true);
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Flatboy") {
-            text1.SetActive(false);
+            text2.SetActive(false);
         }
         if (collision.gameObject.name == "Cutegirl") {
-            text2.SetActive(false);
+            text1.SetActive(false);
         }
     }
 }

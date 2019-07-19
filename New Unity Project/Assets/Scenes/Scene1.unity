@@ -11623,6 +11623,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flatboy
       objectReference: {fileID: 0}
+    - target: {fileID: 3769665167004715471, guid: 465b39c26e4e449a28e635ecd5ea94ab,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.07137716
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769665167004715471, guid: 465b39c26e4e449a28e635ecd5ea94ab,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.907918
+      objectReference: {fileID: 0}
     - target: {fileID: 3769665167004715468, guid: 465b39c26e4e449a28e635ecd5ea94ab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11701,6 +11711,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cutegirl
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398955300195188461, guid: 9fce72688321c4e01b5943b11c2a0fb5,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.075906575
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398955300195188461, guid: 9fce72688321c4e01b5943b11c2a0fb5,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.6369361
       objectReference: {fileID: 0}
     - target: {fileID: 4398955300195188463, guid: 9fce72688321c4e01b5943b11c2a0fb5,
         type: 3}
