@@ -12,15 +12,16 @@ public class FlatboyMovement : MonoBehaviour
     private Rigidbody2D rb;
     private float runSpeed = Settings.factor * Settings.runSpeed;
     private float walkSpeed = Settings.factor * Settings.walkSpeed;
+    private float slideSpeed = Settings.factor * Settings.slideSpeed;
     private float jumpSpeed = Settings.jumpFactor * Settings.jumpForce;
-    private float moveSpeed = 0.2f;
+    public float moveSpeed = 0.2f;
 
     public bool isGrounded = false;
     public bool isJumping = false;
     public bool isRunning = false;
     public bool isWalking = false;
     public bool isDead = false;
-    
+    private bool isSlide = false;
     public int score = 0;
     private float maxDistance = 1000f;
     Vector2 newPos;
@@ -31,7 +32,7 @@ public class FlatboyMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         otherPlayer = GameObject.Find("Cutegirl");
         maxDistance = camera.GetComponent<CameraWithPlayers>().maxDistance;
-        jumpAudio = gameObject.GetComponent<AudioSource>();
+        jumpAudio = GetComponent<AudioSource>();
     }
 
     bool CheckOutOfBound(float x) {
@@ -55,7 +56,9 @@ public class FlatboyMovement : MonoBehaviour
             anim.SetBool("isWalking", false);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow)) 
+        if (isSlide)
+            moveSpeed = 0f;
+        else if (Input.GetKey(KeyCode.DownArrow)) 
             moveSpeed = walkSpeed;
         else moveSpeed = runSpeed;
 
@@ -67,6 +70,8 @@ public class FlatboyMovement : MonoBehaviour
             transform.position = newPos;
             anim.SetBool(stringAction, true);
             anim.SetBool(stringActionNot, false);
+            if (isSlide)
+                rb.AddForce(new Vector2(-slideSpeed, 0f), ForceMode2D.Impulse);
         }
         else if (Input.GetKey(KeyCode.RightArrow)) {
             GetComponent<SpriteRenderer>().flipX = false;
@@ -74,6 +79,8 @@ public class FlatboyMovement : MonoBehaviour
             transform.position = newPos;
             anim.SetBool(stringAction, true);
             anim.SetBool(stringActionNot, false);
+            if (isSlide)
+                rb.AddForce(new Vector2(slideSpeed, 0f), ForceMode2D.Impulse);
         }
         else {
             anim.SetBool("isRunning", false);
@@ -84,5 +91,17 @@ public class FlatboyMovement : MonoBehaviour
         isJumping = anim.GetBool("isJumping");
         isWalking = anim.GetBool("isWalking");
         isDead = anim.GetBool("isDead");
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.name == "Ice") {
+            isSlide = true;
+        } 
+    }
+
+    private void OnCollisionExit2D(Collision2D collision) {
+        if (collision.gameObject.name == "Ice") {
+            isSlide = false;
+        } 
     }
 }

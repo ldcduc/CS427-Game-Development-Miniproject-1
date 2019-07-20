@@ -18,7 +18,6 @@ public class WaterKillsBoth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if ((collision.gameObject.name == "Cutegirl" || collision.gameObject.name == "Flatboy") && !collision.gameObject.GetComponent<Animator>().GetBool("isDead")) {
-            Debug.Log("touched");
             collision.gameObject.GetComponent<Animator>().SetBool("isDead", true);
         } 
     }

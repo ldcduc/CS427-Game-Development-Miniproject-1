@@ -16,12 +16,14 @@ public class CameraWithPlayers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool flag = !(Mathf.Abs(flatBoy.transform.position.x - cuteGirl.transform.position.x) > maxDistance);
-        if (Mathf.Abs(flatBoy.transform.position.x - cuteGirl.transform.position.x) > maxDistance) {
-        } else {
-            float y = gameObject.transform.position.y;
-            float z = gameObject.transform.position.z;
-            gameObject.transform.position = new Vector3((flatBoy.transform.position.x + cuteGirl.transform.position.x)/2, y, z);
-        } 
+        if (GameObject.Find("Flatboy") && GameObject.Find("Cutegirl")) {
+            bool flag = !(Mathf.Abs(flatBoy.transform.position.x - cuteGirl.transform.position.x) > maxDistance);
+            if (Mathf.Abs(flatBoy.transform.position.x - cuteGirl.transform.position.x) > maxDistance) {
+            } else {
+                float y = gameObject.transform.position.y;
+                float z = gameObject.transform.position.z;
+                gameObject.transform.position = new Vector3((flatBoy.transform.position.x + cuteGirl.transform.position.x)/2, y, z);
+            } 
+        }
     }
 }
