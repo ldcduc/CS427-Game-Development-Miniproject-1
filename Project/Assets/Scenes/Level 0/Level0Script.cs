@@ -48,4 +48,8 @@ public class Level0Script : MonoBehaviour
     public void Replay() {
         SceneManager.LoadScene("Scene0");
     }
+
+    public void MainMenu() {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
