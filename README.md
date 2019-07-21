@@ -8,8 +8,10 @@
 
 ![Poster](https://scontent.fsgn5-6.fna.fbcdn.net/v/t1.0-9/67296936_2442677945824081_7767421653004320768_n.jpg?_nc_cat=107&_nc_oc=AQlvnenol8kT2klOPbD9Sxq-Gf2jX2s96eoLNro4Sf6gbrcdIxxw165hK6kMekv_vn0&_nc_ht=scontent.fsgn5-6.fna&oh=5b9a92e260678e54dd9b6cc879c459ee&oe=5DAE1C4D)
 
-## Brief Introduction of Game
+## Full Build directories in Google Drive
+[https://drive.google.com/drive/folders/1tOVoJK-BA8vLKq997hm2aHfyK98u2zWq?usp=sharing](https://drive.google.com/drive/folders/1tOVoJK-BA8vLKq997hm2aHfyK98u2zWq?usp=sharing)
 
+## Brief Introduction of Game
 
 ## Report
 ### Idea
